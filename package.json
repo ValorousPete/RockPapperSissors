@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ValorousPete/RockPapperSissors#readme",
   "dependencies": {
+    "mathjs": "^11.1.0",
     "prompt-sync": "^4.2.0"
   }
 }
