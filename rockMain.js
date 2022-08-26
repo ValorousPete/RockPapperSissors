@@ -5,7 +5,7 @@ console.log(`Hey there ${name}`);
 */
 
 // write a function called getComputerChoice, not randoomString
-function randoomString(){
+function getComputerChoice(){
     const randNum = Math.floor(Math.random() * 3);
     switch (randNum) {
         case 0:
@@ -23,4 +23,4 @@ function randoomString(){
     }
 }
 
-console.log(randoomString());
+console.log(getComputerChoice());
