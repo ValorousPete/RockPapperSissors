@@ -10,6 +10,13 @@ const choices = {
   SCISSORS: 'scissors',
 };
 
+const getWinConditionString = (winner, loser, didUserWin) => 
+  `You ${didUserWin ? 'win' : 'lose'}  ${winner} beats ${loser}.`;
+
+
+
+
+
 // write a function called getComputerChoice, not randoomString
 function getComputerChoice(){
     const randNum = Math.floor(Math.random() * 3);
@@ -29,4 +36,24 @@ function getComputerChoice(){
 // Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
 
 
-console.log(getComputerChoice());
+
+
+
+function singleRound(playerSelection, computerSelection){
+    if (
+      playerSelection === choices.ROCK  && computerSelection === choices.SCISSORS ||
+      playerSelection === choices.SCISSORS && computerSelection === choices.PAPER ||
+      playerSelection === choices.PAPER && computerSelection === choices.ROCK
+      ){ 
+        return getWinConditionString(playerSelection, computerSelection, true);
+      }
+        return getWinConditionString(computerSelection, playerSelection, false);
+}
+
+const computerChoice = getComputerChoice() 
+
+const playerChoice = prompt('Pick Rock, Paper or Sciccors: ')
+
+const result = singleRound(playerChoice, computerChoice)
+
+console.log(result);
