@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ValorousPete/RockPapperSissors/issues"
   },
-  "homepage": "https://github.com/ValorousPete/RockPapperSissors#readme"
+  "homepage": "https://github.com/ValorousPete/RockPapperSissors#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
